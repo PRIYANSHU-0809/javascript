@@ -4,54 +4,133 @@
 // 8 to 10 computer chooses scissors
 
 
-function rock(){
+// function rock(){
+
+//     let x=Math.random();
+
+//     if(x>=0 && x<=1/3){
+//         alert("You chooses rock \nComputer chooses rock \nTie.")
+//     }
+
+//     else if(x>1/3 && x<=2/3)
+//     {
+//         alert("You choose rock \nComputer chooses paper\nYou Win");
+//     }
+//     else{
+//         alert("You choose rock \nComputer chooses scissor \nYou Win");
+//     }
+
+// }
+
+// function paper(){
+
+//     let x=Math.random();
+//     if(x>=0 && x<=1/3){
+//         alert("You chooses paper \nComputer chooses rock \nYou loose.")
+//     }
+
+//     else if(x>1/3 && x<=2/3)
+//     {
+//         alert("You choose paper \nComputer chooses paper\n Tie");
+//     }
+//     else{
+//         alert("You choose paper \nComputer chooses scissor \nYou loose");
+//     }
+
+// }
+
+// function scissor(){
+
+//     let x=Math.random();
+
+//     if(x>=0 && x<=1/3){
+//         alert("You chooses scissor \nComputer chooses rock \nYou loose.")
+//     }
+
+//     else if(x>1/3 && x<=2/3)
+//     {
+//         alert("You choose scissor \nComputer chooses paper\nYou Win");
+//     }
+//     else{
+//         alert("You choose scissor \nComputer chooses scissor \nTie");
+//     }
+// }
+
+function implement(move){
 
     let x=Math.random();
 
-    if(x>=0 && x<=1/3){
-        alert("You chooses rock \nComputer chooses rock \nTie.")
-    }
+    let result='';
+    let computerMove='';
 
+    if(x>=0 && x<=1/3)
+    {
+        computerMove='Rock';
+    }
     else if(x>1/3 && x<=2/3)
     {
-        alert("You choose rock \nComputer chooses paper\nYou Win");
+        computerMove='Paper';
     }
     else{
-        alert("You choose rock \nComputer chooses scissor \nYou Win");
+        computerMove='Scissors';
     }
 
-}
-
-function paper(){
-
-    let x=Math.random();
-    if(x>=0 && x<=1/3){
-        alert("You chooses paper \nComputer chooses rock \nYou loose.")
-    }
-
-    else if(x>1/3 && x<=2/3)
+    //computer chooses rock
+    if(computerMove==='Rock')
     {
-        alert("You choose paper \nComputer chooses paper\n Tie");
-    }
-    else{
-        alert("You choose paper \nComputer chooses scissor \nYou loose");
-    }
+        if(move==='rock')
+        {
+            result='Tie';
+        }
+        else if(move==='paper')
+        {
+            result='You loose';
+        }
+        else{
 
-}
-
-function scissor(){
-
-    let x=Math.random();
-
-    if(x>=0 && x<=1/3){
-        alert("You chooses scissor \nComputer chooses rock \nYou loose.")
+            result='You loose';
+        }
     }
 
-    else if(x>1/3 && x<=2/3)
+    //computer chooses paper
+    else if(computerMove==='Paper')
     {
-        alert("You choose scissor \nComputer chooses paper\nYou Win");
+        if(move==='rock')
+        {
+            result='You Win';
+        }
+        else if(move==='paper')
+        {
+            result='Tie';
+        }
+        else{
+
+            result='You Win';
+        }
+
     }
+    
+    //computer chooses scissor
     else{
-        alert("You choose scissor \nComputer chooses scissor \nTie");
+
+        if(move==='rock')
+        {
+            result='You win';
+        }
+        else if(move==='paper')
+        {
+            result='You loose';
+        }
+        else{
+
+            result='Tie';
+        }
     }
+
+    alert(`
+        You choose ${move} 
+        Computer chooses ${computerMove}
+        ${result}
+    `)
+    
 }
