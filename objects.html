@@ -14,7 +14,7 @@
     <button onclick="implement('rock')">Rock</button>
     <button onclick="implement('paper')">Paper</button>
     <button onclick="implement('scissor')">Scissors</button>
-    <button onclick="implement('scissor')">Reset Score</button>
+    <button onclick="update()">Reset Score</button>
 
     <p><a href="">Click here</a> to see the final version of project.</p>
 
@@ -44,95 +44,161 @@
         // console.log(product);
 
         // console.log(typeof product);
-        let score={
+        // let score={
 
-            win:0,
-            loss:0,
-            tie:0
-            };
+        //     win:0,
+        //     loss:0,
+        //     tie:0
+        //     };
 
-        function implement(move) {
+         
+
+        // function update(){
+
+        //     score.win=0;
+        //     score.loss=0;
+        //     score.tie=0;
+           
+        // }
+
+        // function implement(move) {
+
+            
+        //     let x = Math.random();
+
+        //     let result = '';
+        //     let computerMove = '';
+
+        //     if (x >= 0 && x <= 1 / 3) {
+        //         computerMove = 'Rock';
+        //     }
+        //     else if (x > 1 / 3 && x <= 2 / 3) {
+        //         computerMove = 'Paper';
+        //     }
+        //     else {
+        //         computerMove = 'Scissors';
+        //     }
+
+        //     //computer chooses rock
+        //     if (computerMove === 'Rock') {
+        //         if (move === 'rock') {
+        //             result = 'Tie';
+        //             score.tie++;
+                    
+
+        //         }
+        //         else if (move === 'paper') {
+        //             result = 'You loose';
+        //             score.loss++;
+                    
+
+        //         }
+        //         else {
+
+        //             result = 'You loose';
+        //             score.loss++;
+                    
+
+        //         }
+        //     }
+
+        //     //computer chooses paper
+        //     else if (computerMove === 'Paper') {
+        //         if (move === 'rock') {
+        //             result = 'You Win';
+        //             score.win++;
+                    
+        //         }
+        //         else if (move === 'paper') {
+        //             result = 'Tie';
+        //             score.tie++;
+                    
+
+        //         }
+        //         else {
+
+        //             result = 'You Win';
+        //             score.win++;
+                    
+        //         }
+
+        //     }
+
+        //     //computer chooses scissor
+        //     else {
+
+        //         if (move === 'rock') {
+        //             result = 'You win';
+        //             score.win++;
+                    
+        //         }
+        //         else if (move === 'paper') {
+        //             result = 'You loose';
+        //             score.loss++;
+        //         }
+        //         else {
+
+        //             result = 'Tie';
+        //             score.tie++;
+        //         }
+        //     }
 
             
 
-            let x = Math.random();
+        //     alert(`
+        //         You choose ${move} 
+        //         Computer chooses ${computerMove}
+        //         ${result}
+        //         Wins : ${score.win} , Losses: ${score.loss} , Ties: ${score.tie}
+        //     `)
 
-            let result = '';
-            let computerMove = '';
+        // }
 
-            if (x >= 0 && x <= 1 / 3) {
-                computerMove = 'Rock';
-            }
-            else if (x > 1 / 3 && x <= 2 / 3) {
-                computerMove = 'Paper';
-            }
-            else {
-                computerMove = 'Scissors';
-            }
+        
+        
 
-            //computer chooses rock
-            if (computerMove === 'Rock') {
-                if (move === 'rock') {
-                    result = 'Tie';
-                    score.tie++;
+        // let product={
 
-                }
-                else if (move === 'paper') {
-                    result = 'You loose';
-                    score.loss++;
-                }
-                else {
+        //     name: "bat",
+        //     rating: 4.7,
+        //     reviews: 98,
+        //     water_proof: true,
+        //     specs: function talk(){
+        //         console.log("I am a bat");
+        //     }, 
 
-                    result = 'You loose';
-                    score.loss++;
-                }
-            }
+        //     popularity:{
 
-            //computer chooses paper
-            else if (computerMove === 'Paper') {
-                if (move === 'rock') {
-                    result = 'You Win';
-                    score.win++;
-                }
-                else if (move === 'paper') {
-                    result = 'Tie';
-                    score.tie++;
-                }
-                else {
+        //         likes: 200,
+        //         views: 2000000,
 
-                    result = 'You Win';
-                    score.win++;
-                }
+        //     }
 
-            }
+        // };
 
-            //computer chooses scissor
-            else {
+        // console.log(product.name);
+        // console.log(product.rating);
+        // console.log(product.reviews);
+        // console.log(product.water_proof);
+        // console.log(product.specs());
+        // console.log(product.popularity.likes);
+        // console.log(product.popularity.views);
 
-                if (move === 'rock') {
-                    result = 'You win';
-                    score.win++;
-                }
-                else if (move === 'paper') {
-                    result = 'You loose';
-                    score.loss++;
-                }
-                else {
+        // console.log(product);
 
-                    result = 'Tie';
-                    score.tie++;
-                }
-            }
+        // const a=JSON.stringify(product);
+        // console.log(product);
+        // console.log(JSON.parse(a));
 
-            alert(`
-                You choose ${move} 
-                Computer chooses ${computerMove}
-                ${result}
-                Wins : ${score.win} , Losses: ${score.loss} , Ties: ${score.tie}
-            `)
+        
+        console.log('hello'.length);
 
-        }
+        let s="My name is Phohoe";
 
+        console.log(s.toUpperCase());
+        console.log(s.toLowerCase());
+
+        
 
 
     </script>

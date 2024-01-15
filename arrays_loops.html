@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Loops</title>
+
+    <style>
+
+        .final_btn{
+
+            padding:9px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: green;
+            cursor: pointer;
+            font-weight: 700;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .work{
+
+            padding: 8px;
+        }
+
+        .month_date{
+
+            padding: 7px;
+        }
+/* 
+        .del{
+            padding:9px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: red;
+            cursor: pointer;
+            font-weight: 700;
+            border-radius: 8px;
+            color: white;
+            visibility: hidden;
+        } */
+
+        .check1{
+
+            display: grid;
+            grid-template-columns:200px 150px 100px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+
+    <p>Todo List Practice 1</p>
+
+    <input type="text"  id="first_box" placeholder="Todo name">
+    <button class="first_btn"  onclick="addList()">Add</button>
+    
+
+    <p>Todo List Practice 2</p>
+
+    <input type="text" id="second_box" placeholder="Todo name">
+    <button class="second_btn" onclick="printWindow()">Add</button>
+
+    <div class="ans">
+
+    </div>
+
+    <p>Todo List</p>
+
+    <input type="text" placeholder="Todo name" class="work">
+
+    <input type="date" class="month_date">
+
+    <button class="final_btn"  onclick="last()">Add</button>
+
+    
+
+    <div class="check check1">
+
+    </div>
+
+    <script>
+
+        // const arr=[10,12,30];
+
+        // console.log(arr);
+
+        // console.log(arr[0]);
+
+        // console.log(arr[1]);
+
+        // console.log(arr[2]);
+
+        // for(i=0; i<3; i++)
+        // {
+        //     console.log(arr[i]);
+
+        // }
+
+        // const myArr=[1, 'hello', true, {name: "priyanshu" , age:"20"}, [1,2,3]];
+
+        // for(i=0; i<myArr.length; i++)
+        // {
+        //     console.log(myArr[i]);
+        // }
+
+        // console.log(myArr.length);
+
+        // myArr.push(100);
+
+        // console.log(myArr);
+
+        // myArr.slice(2,2);
+
+        // console.log(myArr);
+
+        let arr=[];
+
+        function addList(){
+
+            const tgt=document.querySelector('#first_box');
+
+            let val= tgt.value;
+            console.log(val);
+
+            arr.push(val);
+
+            console.log(arr);
+
+            tgt.value= '';
+
+
+        }
+
+
+        const final=[];
+
+        function update()
+        {
+            let ans='';
+
+            for(let i=0; i<final.length; i++)
+            {
+                const elem=final[i];
+
+                let accum=`<p>${elem}</p>`;
+
+                ans+=accum;
+            }
+            document.querySelector('.ans').innerHTML=ans;
+        }
+
+
+        function printWindow(){
+
+            const ele=document.querySelector("#second_box");
+
+            let val=ele.value;
+
+            final.push(val);
+
+            console.log(final);
+
+            ele.value='';
+
+            update();
+        }
+
+
+        const arr3=[];
+
+        function last(){
+
+            const a=document.querySelector('.work');
+            let val=a.value;
+
+            const b=document.querySelector('.month_date');
+            let val1=b.value;
+
+            arr3.push({
+                name:val,
+                date:val1
+            });
+
+            a.value='';
+            b.value='';
+
+            rest();
+
+        }
+
+        function rest()
+        {
+            let a='';
+
+            for(let i=0; i<arr3.length;i++)
+            {
+                const k=arr3[i].name;
+                const c=arr3[i].date;
+                let b=`<div>${k}</div> 
+                
+                       <div>${c}</div>
+                    
+                        <button onclick="
+                    
+                        arr3.splice(${i},1);
+                        rest();
+                    ">Delete</button> </p>`;
+                
+                a+=b;
+            }
+
+            let c=document.querySelector('.check');
+
+            c.innerHTML=a;
+
+        }
+
+    </script>
+    
+</body>
+</html>
