@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Function</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+        //function without paramater
+        function greeting()
+        {
+            console.log("hello");
+        }
+
+        greeting();
+
+
+        //function is actually a value so it can be stored inside the variable
+        const func= function greet(){
+
+            console.log("hii");
+        }
+
+        func();
+
+        // function with parameter
+        function display(vari)
+        {
+            vari();
+        }
+
+
+        // as function is also a value we can call a function by using a function also called the call back function 
+        display(function greet(){
+            console.log("Chutiya");
+        });
+
+        */
+
+        // setTimeout(function , time) -> allows to run a function in future
+
+        // setTimeout( function (){
+
+        //     console.log("Hello");
+        // }, 1000);
+
+        /*
+        setInterval(function (){
+
+            console.log("Every after 4 sec !");
+        }, 3000);
+        */
+
+        let arr=[11,24,83,34];
+
+        
+        arr.forEach(function (elem,ind){
+
+            console.log(ind);
+            console.log(elem);
+        });
+
+
+
+
+        
+    </script>
+</body>
+</html>

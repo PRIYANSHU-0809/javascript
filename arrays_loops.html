@@ -10,23 +10,40 @@
         .final_btn{
 
             padding:9px;
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
             background-color: green;
             cursor: pointer;
-            font-weight: 700;
             border-radius: 8px;
             color: white;
+            border: none;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        .delete_to_do{
+
+            padding:9px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: red;
+            cursor: pointer;
+            border-radius: 8px;
+            color: white;
+            border: none;
+            font-size: 15px;
         }
 
         .work{
 
             padding: 8px;
+            font-size: 15px;
         }
 
         .month_date{
 
             padding: 7px;
+            font-size: 15px;
         }
 /* 
         .del{
@@ -45,6 +62,19 @@
 
             display: grid;
             grid-template-columns:200px 150px 100px;
+            /* padding: 10px; */
+            column-gap: 15px;
+            row-gap: 15px;
+            
+        }
+
+        .in{
+            display: grid;
+            grid-template-columns:200px 150px 100px;
+            column-gap: 15px;
+            align-items: center;
+
+            margin-bottom: 15px;
             
         }
         
@@ -69,11 +99,15 @@
 
     <p>Todo List</p>
 
-    <input type="text" placeholder="Todo name" class="work">
+    <div class="in">
 
-    <input type="date" class="month_date">
+        <input type="text" placeholder="Todo name" class="work">
 
-    <button class="final_btn"  onclick="last()">Add</button>
+        <input type="date" class="month_date">
+
+        <button class="final_btn"  onclick="last()">Add</button>
+    </div>
+    
 
     
 
@@ -195,22 +229,23 @@
         {
             let a='';
 
-            for(let i=0; i<arr3.length;i++)
-            {
-                const k=arr3[i].name;
-                const c=arr3[i].date;
-                let b=`<div>${k}</div> 
+            arr3.forEach(function (elem,ind){
                 
-                       <div>${c}</div>
+                const k=elem.name;
+                const c=elem.date;
+                let b=`<div>${k}</div> <div>${c}</div> <button onclick="
                     
-                        <button onclick="
-                    
-                        arr3.splice(${i},1);
-                        rest();
-                    ">Delete</button> </p>`;
+                    arr3.splice(${ind},1);
+                    rest();
+                " class="delete_to_do">Delete</button>
+                       
+                       `;
                 
                 a+=b;
-            }
+            });
+            
+               
+            
 
             let c=document.querySelector('.check');
 
