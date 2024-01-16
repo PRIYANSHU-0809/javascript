@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+
+    <button onclick=""  class="btn">Click me</button>
+    
+    <script>
+
+       
+    //    const a = function check(){
+
+    //         console.log("chutiy");
+    //    };
+
+    //    a();
+
+    //    const val= function ()
+    //    {
+    //         console.log("nimoo");
+    //    };
+       
+    //    val();
+
+    //    // fat arrow function 
+    //    const val1 = (param)=>{
+
+    //     console.log(param);
+    //     };
+       
+       
+
+    //    val1("cute bachi");
+
+    const elem=document.querySelector('.btn');
+
+    
+
+    elem.addEventListener('click', ()=>{
+        console.log("Cliked");
+    });
+
+    document.body.addEventListener('keydown', (val)=>{
+
+        console.log(val.key);
+    });
+
+    
+    elem.addEventListener('mouseover', ()=>{
+
+        elem.innerHTML="bhago";
+    });
+
+    elem.addEventListener('mouseout', ()=>{
+
+        elem.innerHTML="Click me";
+    });
+
+    elem.addEventListener('focusin', ()=>{
+
+        elem.innerHTML="Click me";
+    });
+       
+
+
+
+    </script>
+</body>
+</html>
